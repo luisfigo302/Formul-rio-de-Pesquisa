@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Formulário de Pesquisa</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center" >Áreas de Lazer no Condomínio</h1>
+            <p id="description" class="description text-center">Você gostaria de desfrutar de mais áreas de lazer em nosso prédio?</p>
+        </header>
+        <form id="survey-form" class="content-center">
+            <div class="form-group">
+                <label id="name-label" for="name">Nome</label>
+                <input type="text" name="name" 
+                 id="name" class="form-control"
+                 placeholder="Insira seu nome" required
+                 />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email-label">E-mail</label>
+                <input type="email" name="email"
+                id="email" class="form-control" placeholder="Insira seu e-mail" required
+                />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Idade<span class="clue">(opcional)</span>
+                </label>
+                <input type="number" name="age" id="number" 
+                  min="18" max="99" class="form-control" placeholder="Idade">
+            </div>
+            <div class="form-group">
+                <p>Qual sua principal ocupação no momento?</p>
+                  <select id="dropdown" name="role" 
+                  class="form-control" required>
+                      <option disabled selected value>Selecione sua ocupação</option>
+                      <option value="student">estudante</option>
+                      <option value="job">trabalho em tempo integral</option>
+                      <option value="learner">estagiário</option>
+                      <option value="preferNo">prefiro não falar</option>
+                      <option value="other">outro(a)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Você gosta das áreas internas do condomínio?</p>
+                  <label>
+                      <input name="user-recommend" value="definitely" 
+                      type="radio" class="input-radio" checked
+                      />definitivamente sim
+                  </label>
+                  <label>
+                      <input name="user-recommend" value="maybe" 
+                        type="radio" class="input-radio"/>talvez
+                  </label>
+                  <label>
+                      <input name="user-recommend" value="not-sure" 
+                      type="radio" class="input-radio"/>não gosto
+                  </label>  
+            </div>
+            <div class="form-group">
+                <p> Área você acha que precisa de melhorias?</p>
+                <select name="mostlike" id="most-like" class="form-control" required>
+                    <option disabled selected value>Selecione a opção</option>
+                    <option value="challenges">Salão de Festas</option>
+                    <option value="projects">Portaria</option>
+                    <option value="community">Áreas internas do Condomínio</option>
+                    <option value="openSource">Segurança</option>
+                </select>
+            </div>
+            <div class="form-group"><p>Espaços ou recursos você gostaria que tivesse?
+                     <span class="clue">(Escolha todas as opções que desejar)</span>
+                    </p>
+                     <label><input name="prefer" value="chimas" type="checkbox" class="input-checkbox">Chimarródromo</label>
+                     <label><input name="prefer" value="kids-space" type="checkbox" class="input-checkbox">Espaço Kids</label>
+                     <label><input name="prefer" value="park-chair" type="checkbox" class="input-checkbox">Bancos de Praça</label>
+                     <label><input name="prefer" value="fitness" type="checkbox" class="input-checkbox">Academia</label>
+                     <label><input name="prefer" value="security" type="checkbox" class="input-checkbox">Segurança 24hrs</label>
+                     <label><input name="prefer" value="elevators" type="checkbox" class="input-checkbox">Elevadores</label> 
+                     <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox">Piscinas</label>
+            </div>
+            <div class="form-group">
+                <p>Comentários ou Sugestões?</p>
+                  <textarea id="comments" class="input-textarea" name="comment" placeholder="Escreva seu comentário aqui......"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Enviar</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
